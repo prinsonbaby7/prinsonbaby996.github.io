@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hectare Acre Real Estate | Kerala's Verified Property Network</title>
+<meta name="description" content="Hectare Acre Real Estate — Kerala's Verified Property Network. Premium real estate services for buying, selling, investment, verification and NRI property support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --deep:#06131f;
+  --navy:#0b1f33;
+  --navy2:#102b43;
+  --gold:#c9a45c;
+  --gold-light:#ead29b;
+  --ivory:#f6f1e7;
+  --white:#fff;
+  --text:#dce3e8;
+  --muted:#aebbc5;
+  --line:rgba(201,164,92,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--deep);
+  color:var(--white);
+  font-family:"DM Sans",sans-serif;
+  font-size:18px;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1200px,calc(100% - 44px));margin:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;line-height:1.02;font-weight:500}
+h2{font-size:clamp(52px,6.3vw,84px)}
+.gold{color:var(--gold-light)}
+.eyebrow{
+  color:var(--gold-light);
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:18px
+}
+.btn{
+  min-height:58px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:0 30px;
+  border:1px solid var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:12px;
+  font-weight:700;
+  transition:.3s ease;
+}
+.btn-gold{background:var(--gold);color:var(--deep)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-3px)}
+.btn-outline:hover{background:var(--gold);color:var(--deep);transform:translateY(-3px)}
+.social-icon{width:23px;height:23px;object-fit:contain}
+
+header{
+  position:absolute;
+  z-index:30;
+  width:100%;
+  top:0;
+  padding:24px 0;
+  background:linear-gradient(180deg,rgba(0,0,0,.72),transparent)
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brand img{width:230px}
+.nav-links{display:flex;align-items:center;gap:31px}
+.nav-links a{
+  color:#f4f5f6;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:12px;
+  font-weight:600;
+  transition:.25s
+}
+.nav-links a:hover{color:var(--gold-light)}
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(3,12,19,.94),rgba(3,12,19,.72) 42%,rgba(3,12,19,.20)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=90") center/cover
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,var(--deep),transparent 30%);
+  pointer-events:none
+}
+.hero-content{position:relative;z-index:2;padding:170px 0 110px;max-width:850px}
+.hero h1{
+  font-size:clamp(76px,10vw,138px);
+  letter-spacing:-.045em;
+  margin-bottom:34px
+}
+.hero-copy{
+  max-width:710px;
+  color:#e7ecef;
+  font-size:20px;
+  font-weight:300;
+  line-height:1.75;
+  margin-bottom:42px
+}
+.hero-buttons{display:flex;gap:13px;flex-wrap:wrap}
+
+section{padding:130px 0}
+.about{background:var(--ivory);color:var(--navy)}
+.about-grid{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:95px;
+  align-items:center
+}
+.about-images{position:relative;min-height:640px}
+.about-main{
+  position:absolute;
+  right:0;
+  top:0;
+  width:78%;
+  height:550px;
+  object-fit:cover
+}
+.about-small{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:48%;
+  height:315px;
+  object-fit:cover;
+  border:11px solid var(--ivory)
+}
+.about-frame{
+  position:absolute;
+  inset:27px 27px 62px 0;
+  border:1px solid var(--gold)
+}
+.about-text p{
+  margin:32px 0;
+  color:#465560;
+  font-size:19px;
+  line-height:1.9
+}
+
+.services{background:var(--deep)}
+.section-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:45px;
+  margin-bottom:65px
+}
+.section-heading p{
+  max-width:510px;
+  color:var(--muted);
+  font-size:18px
+}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line)
+}
+.service-card{
+  background:var(--deep);
+  min-height:285px;
+  padding:48px 38px;
+  transition:.35s ease;
+  position:relative
+}
+.service-card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:.35s
+}
+.service-card:hover{background:var(--navy2);transform:translateY(-5px)}
+.service-card:hover:before{width:100%}
+.service-number{
+  color:var(--gold);
+  font:500 27px "Cormorant Garamond",serif;
+  margin-bottom:27px
+}
+.service-card h3{font-size:36px;margin-bottom:14px}
+.service-card p{color:var(--muted);font-size:16px;line-height:1.65}
+
+.feature{
+  min-height:720px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(4,15,24,.96),rgba(4,15,24,.72) 45%,rgba(4,15,24,.18)),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2400&q=90") center/cover
+}
+.feature-content{max-width:680px;padding:140px 0}
+.feature h2{margin-bottom:30px}
+.feature p{color:#d5dde2;font-size:19px;line-height:1.85;margin-bottom:36px}
+
+.nri{background:var(--ivory);color:var(--navy)}
+.nri-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:90px;
+  align-items:center
+}
+.nri-image{width:100%;height:550px;object-fit:cover}
+.nri p{color:#4b5964;font-size:18px;line-height:1.85;margin:30px 0 34px}
+
+.why{background:#091c2d}
+.why-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:100px;
+  align-items:start
+}
+.why-intro p{color:var(--muted);font-size:18px;max-width:580px;margin-top:28px}
+.why-list{border-top:1px solid var(--line)}
+.why-item{
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:20px;
+  padding:34px 0;
+  border-bottom:1px solid var(--line)
+}
+.why-item strong{font:500 27px "Cormorant Garamond";color:var(--gold-light)}
+.why-item h3{font-size:32px;margin-bottom:7px}
+.why-item p{color:var(--muted);font-size:16px;line-height:1.65}
+
+.instagram{
+  text-align:center;
+  background:
+    linear-gradient(rgba(5,17,27,.90),rgba(5,17,27,.96)),
+    url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2400&q=90") center/cover
+}
+.instagram p{
+  max-width:700px;
+  margin:0 auto 28px;
+  color:var(--muted);
+  font-size:18px
+}
+.insta-handle{
+  color:var(--gold-light);
+  font-size:14px;
+  letter-spacing:.24em;
+  font-weight:600;
+  margin-bottom:28px
+}
+
+.contact{background:var(--ivory);color:var(--navy)}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:90px;
+  align-items:center
+}
+.address{color:#4c5963;font-size:17px;margin:30px 0}
+.contact-details{display:grid;gap:14px;font-size:17px}
+.contact-details a:hover{color:#987735}
+.contact-box{
+  padding:48px;
+  border:1px solid rgba(11,31,51,.18);
+  background:rgba(255,255,255,.38)
+}
+.contact-box h3{font-size:42px;margin-bottom:22px}
+.contact-box p{color:#4d5a64;font-size:16px;margin-bottom:30px}
+.whatsapp-row{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{
+  background:#030b12;
+  text-align:center;
+  padding:52px 0;
+  color:#7f8b94;
+  font-size:14px
+}
+.footer-brand{
+  color:var(--gold-light);
+  font:500 32px "Cormorant Garamond",serif;
+  margin-bottom:9px
+}
+.floating-wa{
+  position:fixed;
+  z-index:100;
+  right:24px;
+  bottom:24px;
+  width:66px;
+  height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#25d366;
+  box-shadow:0 14px 35px rgba(0,0,0,.45);
+  transition:.25s
+}
+.floating-wa img{width:36px;height:36px}
+.floating-wa:hover{transform:scale(1.09)}
+
+@media(max-width:950px){
+  .nav-links{display:none}
+  .about-grid,.nri-grid,.contact-grid,.why-grid{grid-template-columns:1fr;gap:55px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .about-images{min-height:540px}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .container{width:calc(100% - 30px)}
+  header{padding:16px 0}
+  .brand img{width:180px}
+  section{padding:85px 0}
+  .hero-content{padding:135px 0 90px}
+  .hero h1{font-size:64px}
+  .hero-copy{font-size:17px}
+  h2{font-size:51px}
+  .services-grid{grid-template-columns:1fr}
+  .about-images{min-height:450px}
+  .about-main{height:395px}
+  .about-small{height:225px}
+  .section-heading{display:block}
+  .section-heading p{margin-top:22px}
+  .feature{min-height:580px}
+  .feature-content{padding:90px 0}
+  .feature p{font-size:17px}
+  .nri-image{height:390px}
+  .contact-box{padding:31px}
+  .contact-box h3{font-size:35px}
+  .floating-wa{width:60px;height:60px;right:18px;bottom:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="Hectare Acre Real Estate">
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#nri">NRI Services</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">Kerala's Verified Property Network</div>
+    <h1>Property.<br><span class="gold">With Confidence.</span></h1>
+    <p class="hero-copy">
+      Trusted real estate guidance for buying, selling and investing in property —
+      supported by verification, professional evaluation and end-to-end assistance.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="#contact">Talk to us</a>
+      <a class="btn btn-outline" href="#services">Explore services</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-images">
+      <div class="about-frame"></div>
+      <img class="about-main" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=90" alt="Luxury property">
+      <img class="about-small" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=90" alt="Premium property interior">
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">About Hectare Acre</div>
+      <h2>Real Estate Decisions <span class="gold">Made With Confidence.</span></h2>
+      <p>
+        At <strong>Hectare Acre Real Estate</strong>, we make buying, selling, and investing in property simple, transparent, and secure.
+        With <strong>verified property listings, professional property evaluation, document verification, legal support, and end-to-end transaction assistance</strong>,
+        we help you make informed real estate decisions with confidence. We also provide dedicated <strong>NRI property services</strong>,
+        offering trusted support for clients managing their property needs from overseas. <strong>Buy with confidence. Sell with clarity. Invest with vision.</strong>
+      </p>
+      <a class="btn btn-gold" href="#contact">Start a conversation</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Our Services</div>
+        <h2>Everything <span class="gold">Property.</span></h2>
+      </div>
+      <p>Everything you need to make smarter, safer and more confident property decisions.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card"><div class="service-number">01</div><h3>Buy Property</h3><p>Find the right property with confidence</p></article>
+      <article class="service-card"><div class="service-number">02</div><h3>Sell Property</h3><p>Professional marketing, valuation &amp; buyer support</p></article>
+      <article class="service-card"><div class="service-number">03</div><h3>Real Estate Investment</h3><p>Smart property opportunities &amp; investment guidance</p></article>
+      <article class="service-card"><div class="service-number">04</div><h3>NRI Property Services</h3><p>Complete support for NRI property needs</p></article>
+      <article class="service-card"><div class="service-number">05</div><h3>Property Verification</h3><p>Document, ownership &amp; due-diligence checks</p></article>
+      <article class="service-card"><div class="service-number">06</div><h3>Legal &amp; Transaction Support</h3><p>Professional legal, documentation &amp; registration assistance</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="container">
+    <div class="feature-content">
+      <div class="eyebrow">A Better Property Journey</div>
+      <h2>From First Search to <span class="gold">Final Signature.</span></h2>
+      <p>
+        We bring together property discovery, evaluation, verification and transaction support
+        so you can move forward with greater clarity at every stage.
+      </p>
+      <a class="btn btn-gold" href="#contact">Speak with our team</a>
+    </div>
+  </div>
+</section>
+
+<section class="nri" id="nri">
+  <div class="container nri-grid">
+    <img class="nri-image" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90" alt="Premium property">
+    <div>
+      <div class="eyebrow">For NRIs</div>
+      <h2>Your Property.<br><span class="gold">Our Support.</span></h2>
+      <p>
+        Managing property from overseas can be challenging. Our dedicated NRI property services
+        provide trusted local support for property search, verification, evaluation,
+        documentation and transaction coordination.
+      </p>
+      <a class="btn btn-gold" target="_blank" rel="noopener"
+         href="https://wa.me/916238450261?text=Hello%20Hectare%20Acre%20Real%20Estate%2C%20I%20would%20like%20to%20know%20more%20about%20your%20NRI%20property%20services.">
+        <img class="social-icon" src="whatsapp.svg" alt=""> NRI enquiry
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container why-grid">
+    <div class="why-intro">
+      <div class="eyebrow">Why Hectare Acre</div>
+      <h2>Confidence in <span class="gold">Every Acre.</span></h2>
+      <p>
+        We focus on the details that matter, helping clients approach property decisions
+        with transparency, practical guidance and professional support.
+      </p>
+    </div>
+
+    <div class="why-list">
+      <div class="why-item"><strong>01</strong><div><h3>Verified</h3><p>Property and ownership checks designed to support informed decisions.</p></div></div>
+      <div class="why-item"><strong>02</strong><div><h3>Transparent</h3><p>Clear communication and practical guidance throughout the process.</p></div></div>
+      <div class="why-item"><strong>03</strong><div><h3>Professional</h3><p>Property evaluation, documentation and transaction support under one roof.</p></div></div>
+      <div class="why-item"><strong>04</strong><div><h3>Trusted Support</h3><p>Local assistance for clients in Kerala and dedicated support for NRIs.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="instagram" id="instagram">
+  <div class="container">
+    <div class="eyebrow">Follow Our Journey</div>
+    <h2>Property. Places. <span class="gold">Possibilities.</span></h2>
+    <p>Follow us for property insights, real estate updates, opportunities and stories from Kerala.</p>
+    <div class="insta-handle">REALTOR OF TRAVANCORE</div>
+
+    <a class="btn btn-gold" target="_blank" rel="noopener"
+       href="https://www.instagram.com/realtor_of_travancore/">
+      <img class="social-icon" src="instagram.svg" alt="">
+      Follow on Instagram
+    </a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Let's Talk <span class="gold">Property.</span></h2>
+
+      <div class="address">
+        <strong>Hectare Acre Real Estate</strong><br>
+        Moolekkarayil Complex<br>
+        Vengallore–Kolani Bypass<br>
+        Thodupuzha, Kerala – 685608<br>
+        India
+      </div>
+
+      <div class="contact-details">
+        <div><strong>WhatsApp:</strong> <a target="_blank" rel="noopener" href="https://wa.me/919446400796">+91 9446400796</a></div>
+        <div><strong>WhatsApp:</strong> <a target="_blank" rel="noopener" href="https://wa.me/916238450261">+91 6238450261</a></div>
+        <div><strong>Email:</strong> <a href="mailto:sales@hectareacrerealestate.com">sales@hectareacrerealestate.com</a></div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <h3>Ready to make your next property move?</h3>
+      <p>
+        Whether you are buying, selling, investing or managing property from overseas,
+        our team is ready to help.
+      </p>
+
+      <div class="whatsapp-row">
+        <a class="btn btn-gold" target="_blank" rel="noopener"
+           href="https://wa.me/916238450261?text=Hello%20Hectare%20Acre%20Real%20Estate%2C%20I%20would%20like%20to%20discuss%20a%20property.">
+          <img class="social-icon" src="whatsapp.svg" alt="">
+          WhatsApp us
+        </a>
+        <a class="btn btn-outline" href="mailto:sales@hectareacrerealestate.com">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">HECTARE ACRE REAL ESTATE</div>
+  <div>Kerala's Verified Property Network</div>
+  <div style="margin-top:12px">© 2026 Hectare Acre Real Estate. All rights reserved.</div>
+</footer>
+
+<a class="floating-wa" target="_blank" rel="noopener"
+   href="https://wa.me/916238450261?text=Hello%20Hectare%20Acre%20Real%20Estate%2C%20I%20would%20like%20to%20make%20a%20property%20enquiry."
+   aria-label="Chat with Hectare Acre Real Estate on WhatsApp">
+  <img src="whatsapp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
